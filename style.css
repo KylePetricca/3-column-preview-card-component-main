@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-orange: hsl(31, 77%, 52%);
+    --main-cyan: hsl(184, 100%, 22%);
+    --main-green: hsl(179, 100%, 13%);
+    
+    --body-text-color: hsla(0, 0%, 100%, 0.75);
+    --header-text-color: hsl(0, 0%, 95%);
+}
+
+body {
+    height: 100vh;
+    font-size: 15px;
+    font-family: 'Lexend Deca', sans-serif;
+    background-color: var(--header-text-color);
+    display: grid;
+    place-content: center;
+}
+
+h1 {
+    color: var(--header-text-color);
+    font-family: 'Big Shoulders Display', cursive;
+    text-transform: uppercase;
+    font-size: 2.8rem;
+}
+
+p {
+    color: var(--body-text-color);
+    line-height: 1.9;
+}
+
+.card {
+    min-width: 17rem;
+    max-width: 60rem;
+    border-radius: 1rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    overflow: hidden;
+    margin: 1.5rem;
+}
+
+.card > div[class^="box-"] {
+    padding: 3.5rem;
+    position: relative;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 8rem;
+}
+
+.box-1 {
+    background-color: var(--main-orange);
+}
+
+.box-2 {
+    background-color: var(--main-cyan);
+}
+
+.box-3 {
+    background-color: var(--main-green);
+}
+
+.btn {
+    cursor: pointer;
+    color: black;
+    mix-blend-mode: lighten;
+    background-color: var(--header-text-color);
+    padding: 0.66rem 1.66rem;
+    border-radius: 2rem;
+    transition: all 0.3s ease;
+    position: absolute;
+    bottom: 2.5rem;
+    border: 2px solid var(--header-text-color);
+}
+
+.btn:hover {
+    color: var(--header-text-color);
+    background-color: black;
+}
+
+@media only screen and (max-width: 792px) {
+    .card {
+        grid-template-columns: 1fr;
+    }
+}
